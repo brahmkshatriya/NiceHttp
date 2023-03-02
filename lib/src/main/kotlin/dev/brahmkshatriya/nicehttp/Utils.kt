@@ -54,7 +54,7 @@ fun getData(
         builder.build()
 
     } else if (json != null) {
-        val type = if (json.startsWith("{")) RequestBodyTypes.TEXT else RequestBodyTypes.JSON
+        val type = if (json.startsWith("{")) RequestBodyTypes.JSON else RequestBodyTypes.TEXT
         json.toRequestBody(type.toMediaTypeOrNull())
 
     } else if (!files.isNullOrEmpty()) {
